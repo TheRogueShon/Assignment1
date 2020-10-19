@@ -2,12 +2,11 @@
 
 class SignupModel extends Observable_Model
 {
-    private $courses = [];
 
     public function getAll() : array{
-        $courseData = file_get_contents('data/courses.json');
-        $this->courses = json_decode($courseData, TRUE); 
-        return $this->courses;
+        $users = $this->loadData(DATA_DIR . '/users.json');
+
+        return $users;
     }
 
     public function getRecord(string $id) : array{

@@ -5,9 +5,9 @@ class CoursesModel extends Observable_Model
     private $courses = [];
 
     public function getAll() : array{
-        $courseData = file_get_contents('data/courses.json');
-        $this->courses = json_decode($courseData, TRUE); 
-        return $this->courses;
+        $courses = $this->loadData(DATA_DIR . '/courses.json');
+        $instructors = $this->loadData(DATA_DIR . '/instructors.json');
+        return ['courses'=>$courses['courses'], 'instructors'=>$instructors['instructors']];
     }
 
     public function getRecord(string $id) : array{

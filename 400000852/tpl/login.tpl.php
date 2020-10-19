@@ -7,26 +7,27 @@
 	</head>
 	<body>
 		<nav>
-			<a href="#"><img src="images/logo.png" alt="UWI online"></a>
+			<a href="index.php"><img src="images/logo.png" alt="UWI online"></a>
 			<ul>
-				<li><a href="index.php?controller=Courses">Courses</a></li>
-				<li><a href="index.php?controller=Streams">Streams</a></li>
+				<li><a href="courses.php">Courses</a></li>
+				<li><a href="streams.php">Streams</a></li>
 				<li><a href="index.php?controller=AboutUs">About Us</a></li>
-				<li><a href="index.php?controller=Login">Login</a></li>
-				<li><a href="index.php?controller=SignUp">Sign Up</a></li>
+				<li><a href="login.php">Login</a></li>
+				<li><a href="signup.php">Sign Up</a></li>
 			</ul>
 		</nav>
 		<main>
 		   <div class="login-box">
 			<div class="login-box-body">
 			<p class="login-box-msg">Be Curious - Sign In</p>
-			<form action="#" method="post">
+			<form action="processLogin.php" method="post">
 			  <div class="form-group has-feedback">
-				<input type="text" class="form-control" placeholder="Email"/>
+				<input type="text" class="form-control" name="email" placeholder="Email"/>
 			  </div>
 			  <div class="form-group has-feedback">
-				<input type="password" class="form-control" placeholder="Password"/>
+				<input type="password" class="form-control" name="password" placeholder="Password"/>
 			  </div>
+			  <p class="error-message"><?php if (isset($errors)): echo $errors; endif; ?></p>
 			  <div class="row">
 				<div class="col-xs-8">    
 				  <div class="checkbox icheck">
@@ -41,7 +42,7 @@
 			  </div>
 			</form>
 			<br>
-			<a href="register.html" class="text-center">Sign Up</a>
+			<a href="signup.php" class="text-center">Sign Up</a>
        </div><!-- /.login-box-body -->
 	  </div>
 			<footer>

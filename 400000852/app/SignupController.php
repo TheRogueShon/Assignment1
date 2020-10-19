@@ -2,16 +2,16 @@
 class SignupController extends Controller_Abstract
 {
     public function run(){
+        $v = new View();
+        $v->setTemplate(TPL_DIR . '/signup.tpl.php');
+
         $this->setModel(new SignupModel());
-        $this->setView (new View());
-
-        $this->view->setTemplate('tpl/signup.tpl.php');
-
-        $this->view->display();
+        $this->setView ($v);
 
         $this->model->attach($this->view);
-
-        $this->model->getAll();
+        $data = $this->model->getAll();
+        
+        $this->model->updateChangedData($data);
 
         $this->model->notify();
     }

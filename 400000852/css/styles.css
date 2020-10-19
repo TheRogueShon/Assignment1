@@ -564,3 +564,8 @@ a {
 .login-page, .register-page {
     background: none repeat scroll 0% 0% #D2D6DE;
 }
+
+.error-message{
+	color: red;
+	font-weight: 600;
+}

@@ -7,7 +7,7 @@ abstract class Observable_Model extends ModelAbstract implements ObservableInter
     protected $updatedData = [];
 
     public function attach(ObserverInterface $o){
-        $this->observers = $o;
+        $this->observers[] = $o;
     }
 
     public function detach(ObserverInterface $o){
@@ -24,6 +24,10 @@ abstract class Observable_Model extends ModelAbstract implements ObservableInter
 
     public function giveUpdate(){
         return $this->updatedData;
+    }
+
+    public function updateChangedData($newData){
+        $this->updatedData = $newData;
     }
 
     abstract public function getAll() : array;

@@ -2,16 +2,17 @@
 class IndexController extends Controller_Abstract
 {
     public function run(){
+
+        $v = new View();
+        $v->setTemplate(TPL_DIR . '/index.tpl.php');
+
         $this->setModel(new IndexModel());
-        $this->setView (new View());
-
-        $this->view->setTemplate('tpl/index.tpl.php');
-
-        $this->view->display();
+        $this->setView ($v);
 
         $this->model->attach($this->view);
-
-        $this->model->getAll();
+        $data = $this->model->getAll();
+        
+        $this->model->updateChangedData($data);
 
         $this->model->notify();
     }

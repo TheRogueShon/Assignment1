@@ -2,16 +2,16 @@
 class LoginController extends Controller_Abstract
 {
     public function run(){
+        $v = new View();
+        $v->setTemplate(TPL_DIR . '/login.tpl.php');
+
         $this->setModel(new LoginModel());
-        $this->setView (new View());
-
-        $this->view->setTemplate('tpl/login.tpl.php');
-
-        $this->view->display();
+        $this->setView ($v);
 
         $this->model->attach($this->view);
-
-        $this->model->getAll();
+        $data = $this->model->getAll();
+        
+        $this->model->updateChangedData($data);
 
         $this->model->notify();
     }

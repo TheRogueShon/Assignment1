@@ -2,12 +2,11 @@
 
 class ProfileModel extends Observable_Model
 {
-    private $courses = [];
 
     public function getAll() : array{
-        $courseData = file_get_contents('data/courses.json');
-        $this->courses = json_decode($courseData, TRUE); 
-        return $this->courses;
+        $userCourses = $this->loadData(DATA_DIR . '/user_courses.json');
+        $instructors = $this->loadData(DATA_DIR . '/instructors.json');
+        return ['userCourses'=>$userCourses['courses'], 'instructors'=>$instructors['instructors']];
     }
 
     public function getRecord(string $id) : array{

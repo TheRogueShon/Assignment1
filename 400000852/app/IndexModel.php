@@ -2,20 +2,23 @@
 
 class IndexModel extends Observable_Model
 {
-    private $recordData = [];
+    //private $recordData = [];
 
     public function getAll() : array{
-        $courseData = file_get_contents('data/courses.json');
-        $this->recordData = json_decode($courseData, TRUE);
-        $courseInsData = file_get_contents('data/course_instructor.json');
-        array_push($recordDatas, json_decode($courseInsData, TRUE)); 
-        $falcDeptData = file_get_contents('data/faculty_department.json');
-        array_push($recordData, json_decode($falcDeptData, TRUE)); 
-        $falcDeptCourseData = file_get_contents('data/faculty_dept_courses.json');
-        array_push($recordData, json_decode($falcDeptCourseData, TRUE)); 
-        $instructorData = file_get_contents('data/instructors.json');
-        array_push($recordData, json_decode($instructorData, TRUE)); 
-        return $this->recordData;
+        $data = $this->loadData(DATA_DIR . '/courses.json');
+        //return $data;
+        $popularColumn = array_column($data['courses'], 3);
+        $recommendedColumn = array_column($data['courses'], 2);
+        $extra = $data['courses'];
+
+        array_multisort($recommendedColumn, SORT_DESC, $data['courses']);
+        $recommended = array_slice($data['courses'], 0, 8);
+        array_multisort($popularColumn, SORT_DESC, $extra);
+        $popular = array_slice($extra, 0, 8);
+
+        $instructors = $this->loadData(DATA_DIR . '/instructors.json');
+
+        return ['popular'=>$popular, 'recommended'=>$recommended, 'instructors'=>$instructors['instructors']];
     }
 
     public function getRecord(string $id) : array{

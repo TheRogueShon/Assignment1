@@ -7,291 +7,41 @@
 	</head>
 	<body>
 		<nav>
-			<a href="#"><img src="images/logo.png" alt="UWI online"></a>
+			<a href="index.php"><img src="images/logo.png" alt="UWI online"></a>
 			<ul>
-				<li><a href="index.php?controller=Courses">Courses</a></li>
-				<li><a href="index.php?controller=Streams">Streams</a></li>
+				<li><a href="courses.php">Courses</a></li>
+				<li><a href="streams.php">Streams</a></li>
 				<li><a href="index.php?controller=AboutUs">About Us</a></li>
-				<li><a href="index.php?controller=Login">Login</a></li>
-				<li><a href="index.php?controller=SignUp">Sign Up</a></li>
+				<li><a href="logout.php">Logout</a></li>
+				<li><a href="signup.php">Sign Up</a></li>
 			</ul>
 		</nav>
 		<main>
 		<h1>Courses</h1>
 		<ul class="course-list">
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/mathematics.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
-			<li><div>
-				<a href="#"><img src="images/innovation.jpg" alt="course image"></a>
-				</div>
-				<div>
-				<a href="#"><span class="faculty-department">Faculty or Department</span>	
-					<span class="course-title">Course Title</span>
-					<span class="instructor">Course Instructor</span></a>
-				</div>
-				<div>
-					<p>Get Curious.</p>
-					<a href="#" class="startnow-button startnow-btn">Start Now!</a>
-				</div>
-			</li>
+		<?php
+			$i = -1;
+			$j = 0;
+			foreach($courses as $k=>$c):
+				$i++;
+				$j++;
+			 ?>
+			<li>
+			<div>
+				<a href="#"><img src="images/<?php echo $c[4]?>" alt="<?php echo $c[0]?>" title="<?php echo $c[0]?>">
+			</div>
+			<div>
+				<span class="faculty-department">Faculty or Department</span>
+				<span class="course-title"><?php echo $c[0]?></span>
+				<span><?php echo $instructors[$j];?></span></a>
+			</div>
+			<div>
+				<p>Get Curious.</p>
+				<a href="#" class="startnow-button startnow-btn">Start Now!</a>
+			</div></li>
+			<?php
+				endforeach;
+			?>
 		</ul>
 			<footer>
 				<nav>

@@ -12,9 +12,8 @@ class View implements ObserverInterface
 
     public function display(){
         extract($this->data);
-        echo $this->tpl;
         require $this->tpl;
-        return $this->tpl;
+       // return $this->tpl;
     }
 
     public function addVar($name, $value){
@@ -24,8 +23,9 @@ class View implements ObserverInterface
 
     public function update(Observable_Model $obs){
         $records = $obs->giveUpdate();
-        foreach($records as $r){
-            $this->addVar($r['name'], $r['value']);
+        foreach($records as $k=>$r){
+            $this->addVar($k, $r);
         }
+        $this->display();
     }
 }
