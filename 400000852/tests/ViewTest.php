@@ -18,17 +18,22 @@
         }
 
         public function testSetTemplate(){
-            $tplString = $this->view->setTemplate('Something');
-            $this->assertIsString($tplString);
+            $this->view->setTemplate('Something');
+            $template = $this->view->getTemplate();
+            $this->assertIsString($template);
         }
 
-        public function testSetDisplay(){
-            $displayString = $this->view->display();
+        public function testDisplay(){
+            $this->view->setTemplate(TPL_DIR . '/login.tpl.php');
+            $this->view->display();
+            $displayString = $this->view->getDisplay();
             $this->assertIsString($displayString, 'Value is not a string!');
         }
 
         public function testAddVar(){
-            $addedData = $this->view->addVar('John', '31');
-            $this->assertIsArray($addedData);
+            $this->view->addVar('John', '31');
+            $var = $this->view->getVar();
+            $this->assertIsArray($var);
+            $this->assertCount(1, $var);
         } 
     } 

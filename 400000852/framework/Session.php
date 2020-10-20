@@ -3,13 +3,10 @@ class Session
 {
     protected $access = ['profile'=>['testuser']];
 
-    public static function create(){/*
+    public static function create(){
         if(session_status() === PHP_SESSION_ACTIVE){
-            //session_destroy();
             session_start();
-        } */
-        
-        session_start();
+        } 
     }
 
     public function destroy(){
@@ -18,14 +15,16 @@ class Session
 
     public function add($name, $value){
         $_SESSION[$name] = $value;
-        //return $_SESSION[$name];
+    }
+
+    public function getAdd($name){
+        return $_SESSION[$name];
     }
 
     public function remove($name){
         if(isset($_SESSION[$name])){
             unset($_SESSION[$name]);
         }
-        //return $_SESSION[$name];
     }
 
     public function see($name){

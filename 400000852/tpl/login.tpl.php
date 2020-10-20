@@ -18,6 +18,7 @@
 		</nav>
 		<main>
 		   <div class="login-box">
+		   <p><?php if (isset($status)): echo $status; endif; ?></p>
 			<div class="login-box-body">
 			<p class="login-box-msg">Be Curious - Sign In</p>
 			<form action="processLogin.php" method="post">

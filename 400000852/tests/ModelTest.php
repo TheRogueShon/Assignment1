@@ -18,13 +18,13 @@
         }
 
         public function testGetAll(){
-            $this->assertFileExists('data/courses.json', 'File does not exist!');
+            $this->assertFileExists(DATA_DIR . '/courses.json', 'File does not exist!');
             $data = $this->model->getAll();
             $this->assertIsArray($data, 'Data is not an array!');
         }
 
         public function testGetRecord(){
-            $this->assertFileExists('data/courses.json', 'File does not exist!');
+            $this->assertFileExists(DATA_DIR . '/courses.json', 'File does not exist!');
             $record = $this->model->getRecord('1234');
             $this->assertIsArray($record, 'Record is not an array!');
         }

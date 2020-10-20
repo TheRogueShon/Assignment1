@@ -7,17 +7,26 @@ class View implements ObserverInterface
 
     public function setTemplate(string $filename){
         $this->tpl = $filename;
+    }
+
+    public function getTemplate(){
         return $this->tpl;
     }
 
     public function display(){
         extract($this->data);
         require $this->tpl;
-       // return $this->tpl;
+    }
+
+    public function getDisplay(){
+        return $this->tpl;
     }
 
     public function addVar($name, $value){
         $this->data[$name] = $value;
+    }
+
+    public function getVar(){
         return $this->data;
     }
 
@@ -28,4 +37,5 @@ class View implements ObserverInterface
         }
         $this->display();
     }
+
 }

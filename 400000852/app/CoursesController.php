@@ -10,12 +10,12 @@ class CoursesController extends Controller_Abstract
         $this->setView ($v);
 
         $session = new Session();
-
-        $this->model->attach($this->view);
-        $user = $session->see('user');
-        if($session->accessible($user, 'profile')){
-            $data = $this->model->getAll();
+        $session->add('user','testuser');
         
+        if(isset($_SESSION['user'])){
+            $this->model->attach($this->view);
+            $data = $this->model->getAll();
+            
             $this->model->updateChangedData($data);
 
             $this->model->notify();
@@ -23,6 +23,6 @@ class CoursesController extends Controller_Abstract
         else{
             $v->setTemplate(TPL_DIR . '/login.tpl.php');
             $v->display();
-        }
+        } 
     }
 }

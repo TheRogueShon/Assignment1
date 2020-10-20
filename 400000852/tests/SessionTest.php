@@ -38,16 +38,26 @@
         }
 
         public function testAdd()
-        {
-            $sessValue = $this->session->add('John' , '31');
-            $this->assertEquals('31', $sessValue);
+        {   
+            Session::create();
+            $this->session->add('user', 'John');
+            $sessValue = $this->session->getAdd('user');
+            $this->assertEquals('John', $sessValue);
         }
 
         public function testRemove()
         {
             Session::create();
-            $this->session->add('John', '31');
-            $removed = $this->session->remove('John');
+            $this->session->add('user', 'John');
+            $this->session->remove('user');
+            $removed = $this->session->see('user');
             $this->assertNull($removed);
+        }
+
+        public function testAccessible()
+        {
+            Session::create();
+            $access = $this->session->accessible('testuser', 'profile');
+            $this->assertTrue($access);
         }
     }

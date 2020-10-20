@@ -1,10 +1,6 @@
 <?php
    use PHPUnit\Framework\TestCase;
-/*
-    require 'framework/Controller_Abstract.php';
-    require 'framework/Observable_Model.php';
-    require 'framework/View.php'; */
-
+   
     class ControllerTest extends TestCase
     {
         private $controller;
@@ -13,8 +9,6 @@
 
         public function setUp():void{
             $this->controller = new IndexController();
-            //$this->view = new View();
-            //$this->model = new IndexModel();
         }
 
         public function tearDown():void{
@@ -27,14 +21,16 @@
 
         public function testSetModel(){
             $this->assertNull($this->model, 'Model is not assigned to null!');
-            //$this->assertEquals(get_class($this->model, 'Model'));
             $this->controller->setModel(new IndexModel);
+            $modelObject = $this->controller->getModel();
+            $this->assertIsObject($modelObject);
         }
 
         public function testSetView(){
             $this->assertNull($this->view, 'View is not assigned to null!');
-            //$this->assertEquals(get_class($this->view, 'View'));
             $this->controller->setView(new View);
+            $viewObject = $this->controller->getView();
+            $this->assertIsObject($viewObject);
         }
 
         public function testRun(){

@@ -12,5 +12,13 @@ abstract class Controller_Abstract
         $this->view = $view;
     }
 
+    public function getModel(){
+        return $this->model;
+    }
+
+    public function getView(){
+        return $this->view;
+    }
+
     abstract public function run();
 }
