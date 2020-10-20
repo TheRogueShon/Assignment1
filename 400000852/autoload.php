@@ -1,7 +1,7 @@
 <?php
 spl_autoload_register(function($class){
     if(!defined('APP_DIR')){
-        define('ROOT_DIR', 'd:\xampp\htdocs\400000852');
+        define('ROOT_DIR', 'c:\xampp\htdocs\400000852');
         define('APP_DIR', ROOT_DIR . "\app");
         define('FRAMEWORK_DIR', ROOT_DIR . '\framework');
         define('TPL_DIR', ROOT_DIR . '\tpl');
